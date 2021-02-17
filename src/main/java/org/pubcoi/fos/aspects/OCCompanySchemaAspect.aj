@@ -22,7 +22,7 @@ public aspect OCCompanySchemaAspect {
         companySchema.id = generateID(companySchema);
     }
 
-    after (OCCompanySchema companySchema) : execution(void OCCompanySchema.setJurisdictionCode(String)) && args(String) && target(companySchema) {
+    after (OCCompanySchema companySchema): execution(void OCCompanySchema.setJurisdictionCode(String)) && args(String) && target(companySchema) {
         companySchema.id = generateID(companySchema);
     }
 
