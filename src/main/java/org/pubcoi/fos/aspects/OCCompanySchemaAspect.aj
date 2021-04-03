@@ -26,6 +26,11 @@ public aspect OCCompanySchemaAspect {
         companySchema.id = generateID(companySchema);
     }
 
+    /**
+     * Generates a standard ID, canonicalising the company object
+     * @param company the company object for which to create an ID
+     * @return A company ID, including jurisdiction and company number
+     */
     public static String generateID(OCCompanySchema company) {
         return String.format("oc_company:%s:%s", company.getJurisdictionCode(), company.getCompanyNumber());
     }

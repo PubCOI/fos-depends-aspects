@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Configuration
 public aspect FullNoticeAJ {
 
-    declare @type: org.pubcoi.fos.models.cf.FullNotice :@Document(collection = "cf_notices");
+    declare @type: org.pubcoi.cdm.cf.FullNotice :@Document(collection = "cf_notices");
 
-    declare @field: String org.pubcoi.fos.models.cf.FullNotice.id :@Id;
+    declare @field: String org.pubcoi.cdm.cf.FullNotice.id :@Id;
 }
