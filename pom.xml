@@ -18,7 +18,8 @@
   ~ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
@@ -68,6 +69,7 @@
         <!-- project deps -->
         <version.pubcoi-schemas.hmgcf>1.0.0</version.pubcoi-schemas.hmgcf>
         <version.pubcoi-schemas.openc>1.0.0</version.pubcoi-schemas.openc>
+        <version.pubcoi-schemas.mnis>1.0.0-SNAPSHOT</version.pubcoi-schemas.mnis>
 
         <!-- build deps -->
         <version.aspectj-maven-plugin>1.12.6</version.aspectj-maven-plugin>
@@ -83,10 +85,10 @@
     </properties>
 
     <dependencyManagement>
-       <!--     For some reason the CDM jar is trying to pull in 3.9 even though        -->
-       <!--     the pom explicitly sets it to 3.11 ... artifact replacement is          -->
-       <!--     shedding little light on the situation; so this is nasty, but it'll     -->
-       <!--     at least explicitly set it when we pull it in ...                       -->
+        <!--     For some reason the CDM jar is trying to pull in 3.9 even though        -->
+        <!--     the pom explicitly sets it to 3.11 ... artifact replacement is          -->
+        <!--     shedding little light on the situation; so this is nasty, but it'll     -->
+        <!--     at least explicitly set it when we pull it in ...                       -->
         <dependencies>
             <dependency>
                 <groupId>org.apache.commons</groupId>
@@ -114,6 +116,11 @@
             <groupId>org.pubcoi.schemas</groupId>
             <artifactId>opencorporates</artifactId>
             <version>${version.pubcoi-schemas.openc}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.pubcoi.schemas</groupId>
+            <artifactId>hmg-mnis</artifactId>
+            <version>${version.pubcoi-schemas.mnis}</version>
         </dependency>
         <dependency>
             <!-- this is only pulled in for annotations -->
@@ -199,6 +206,10 @@
                             <groupId>org.pubcoi.schemas</groupId>
                             <artifactId>hmg-contracts-finder</artifactId>
                         </weaveDependency>
+                        <weaveDependency>
+                            <groupId>org.pubcoi.schemas</groupId>
+                            <artifactId>hmg-mnis</artifactId>
+                        </weaveDependency>
                     </weaveDependencies>
                     <aspectDirectory>${project.build.directory}/src/main/java/org/pubcoi/fos/aj</aspectDirectory>
                     <showWeaveInfo>true</showWeaveInfo>
@@ -214,15 +225,15 @@
                 <artifactId>maven-enforcer-plugin</artifactId>
                 <executions>
                     <execution>
-                        <id>default-cli</id>
+                        <id>enforcer</id>
                         <goals>
                             <goal>enforce</goal>
                         </goals>
                         <configuration>
                             <rules>
-                                <banDuplicatePomDependencyVersions />
-                                <dependencyConvergence />
-                                <requireReleaseDeps />
+                                <banDuplicatePomDependencyVersions/>
+                                <dependencyConvergence/>
+<!--                                <requireReleaseDeps/>-->
                                 <requireMavenVersion>
                                     <version>[3.5,)</version>
                                 </requireMavenVersion>
