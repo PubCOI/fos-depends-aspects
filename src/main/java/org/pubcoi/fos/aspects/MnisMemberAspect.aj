@@ -18,6 +18,7 @@
 
 package org.pubcoi.fos.aspects;
 
+import org.pubcoi.cdm.mnis.MnisMemberType;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -28,5 +29,16 @@ public aspect MnisMemberAspect {
     declare @type: org.pubcoi.cdm.mnis.MnisMemberType :@Document(collection = "mnis_members");
 
     declare @field: Integer org.pubcoi.cdm.mnis.MnisMemberType.memberId :@Id;
+
+    public String org.pubcoi.cdm.mnis.MnisMemberType.pwId;
+
+    public String MnisMemberType .getPwId() {
+        return this.pwId;
+    }
+
+    public MnisMemberType MnisMemberType .setPwId(String id) {
+        this.pwId = id;
+        return this;
+    }
 
 }
