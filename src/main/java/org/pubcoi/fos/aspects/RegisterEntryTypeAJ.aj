@@ -18,7 +18,7 @@
 
 package org.pubcoi.fos.aspects;
 
-import org.pubcoi.cdm.mnis.MnisMemberType;
+import org.pubcoi.cdm.pw.RegisterRecordType;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -26,22 +26,22 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import javax.xml.bind.annotation.XmlTransient;
 
 @Configuration
-public aspect MnisMemberAspect {
+public aspect RegisterEntryTypeAJ {
 
-    declare @type: org.pubcoi.cdm.mnis.MnisMemberType :@Document(collection = "mnis_members");
+    declare @type: org.pubcoi.cdm.pw.RegisterRecordType :@Document(collection = "pw_parent_records");
 
-    declare @field: Integer org.pubcoi.cdm.mnis.MnisMemberType.memberId :@Id;
+    declare @field: String org.pubcoi.cdm.pw.RegisterRecordType.id :@Id;
 
-    declare @field: String org.pubcoi.cdm.mnis.MnisMemberType.pwId :@XmlTransient;
+    declare @field: String org.pubcoi.cdm.pw.RegisterRecordType.id :@XmlTransient;
 
-    public String org.pubcoi.cdm.mnis.MnisMemberType.pwId;
+    public String RegisterRecordType.id;
 
-    public String MnisMemberType .getPwId() {
-        return this.pwId;
+    public String RegisterRecordType .getId() {
+        return this.id;
     }
 
-    public MnisMemberType MnisMemberType .setPwId(String id) {
-        this.pwId = id;
+    public RegisterRecordType RegisterRecordType .setId(String id) {
+        this.id = id;
         return this;
     }
 

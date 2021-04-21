@@ -70,6 +70,7 @@
         <version.pubcoi-schemas.hmgcf>1.0.0</version.pubcoi-schemas.hmgcf>
         <version.pubcoi-schemas.openc>1.0.0</version.pubcoi-schemas.openc>
         <version.pubcoi-schemas.mnis>1.0.0-SNAPSHOT</version.pubcoi-schemas.mnis>
+        <version.pubcoi-schemas.parlparse>1.0.0-SNAPSHOT</version.pubcoi-schemas.parlparse>
 
         <!-- build deps -->
         <version.aspectj-maven-plugin>1.12.6</version.aspectj-maven-plugin>
@@ -121,6 +122,11 @@
             <groupId>org.pubcoi.schemas</groupId>
             <artifactId>hmg-mnis</artifactId>
             <version>${version.pubcoi-schemas.mnis}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.pubcoi.schemas</groupId>
+            <artifactId>parlparse</artifactId>
+            <version>${version.pubcoi-schemas.parlparse}</version>
         </dependency>
         <dependency>
             <!-- this is only pulled in for annotations -->
@@ -209,6 +215,10 @@
                         <weaveDependency>
                             <groupId>org.pubcoi.schemas</groupId>
                             <artifactId>hmg-mnis</artifactId>
+                        </weaveDependency>
+                        <weaveDependency>
+                            <groupId>org.pubcoi.schemas</groupId>
+                            <artifactId>parlparse</artifactId>
                         </weaveDependency>
                     </weaveDependencies>
                     <aspectDirectory>${project.build.directory}/src/main/java/org/pubcoi/fos/aj</aspectDirectory>
