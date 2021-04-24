@@ -67,7 +67,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <!-- project deps -->
-        <version.pubcoi-schemas.hmgcf>1.0.0</version.pubcoi-schemas.hmgcf>
+        <version.pubcoi-schemas.hmgcf>1.0.1-SNAPSHOT</version.pubcoi-schemas.hmgcf>
         <version.pubcoi-schemas.openc>1.0.0</version.pubcoi-schemas.openc>
         <version.pubcoi-schemas.mnis>1.0.0-SNAPSHOT</version.pubcoi-schemas.mnis>
         <version.pubcoi-schemas.parlparse>1.0.0-SNAPSHOT</version.pubcoi-schemas.parlparse>
