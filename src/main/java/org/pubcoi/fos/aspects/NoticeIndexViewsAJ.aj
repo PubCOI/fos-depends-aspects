@@ -24,7 +24,9 @@ import org.springframework.context.annotation.Configuration;
 import org.pubcoi.cdm.cf.search.response.NoticeSearchResponse;
 import org.pubcoi.cdm.cf.base.NoticeIndex;
 import org.pubcoi.cdm.cf.search.response.NoticeHitType;
+
 import java.util.List;
+import java.lang.Float;
 
 @Configuration
 public aspect NoticeIndexViewsAJ {
@@ -43,6 +45,14 @@ public aspect NoticeIndexViewsAJ {
 
     declare @field: List<NoticeHitType>
             NoticeSearchResponse.NoticeList.hitOfNoticeIndex
+            :@JsonView(FosViews.Summary.class);
+
+    declare @field: Float
+            NoticeHitType.score
+            :@JsonView(FosViews.Summary.class);
+
+    declare @field: NoticeIndex
+            NoticeHitType.item
             :@JsonView(FosViews.Summary.class);
 
 
