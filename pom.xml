@@ -25,7 +25,7 @@
     <parent>
         <groupId>org.pubcoi.fos</groupId>
         <artifactId>parent</artifactId>
-        <version>1.0.1</version>
+        <version>1.0.2-SNAPSHOT</version>
     </parent>
 
     <artifactId>fos-depends-aspects</artifactId>
@@ -71,15 +71,6 @@
         <version.pubcoi-schemas.openc>1.0.0</version.pubcoi-schemas.openc>
         <version.pubcoi-schemas.mnis>1.0.0-SNAPSHOT</version.pubcoi-schemas.mnis>
         <version.pubcoi-schemas.parlparse>1.0.0-SNAPSHOT</version.pubcoi-schemas.parlparse>
-
-        <!-- build deps -->
-        <version.aspectj-maven-plugin>1.12.6</version.aspectj-maven-plugin>
-
-        <!-- release deps -->
-        <version.maven-source-plugin>3.2.1</version.maven-source-plugin>
-        <version.maven-javadoc-plugin>3.2.0</version.maven-javadoc-plugin>
-        <version.nexus-staging-maven-plugin>1.6.7</version.nexus-staging-maven-plugin>
-        <version.maven-gpg-plugin>1.6</version.maven-gpg-plugin>
 
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -136,38 +127,6 @@
     </dependencies>
 
     <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <!-- todo: merge into parent -->
-                    <artifactId>maven-project-info-reports-plugin</artifactId>
-                    <version>3.1.1</version>
-                </plugin>
-                <!-- local to project: -->
-                <plugin>
-                    <groupId>com.nickwongdev</groupId>
-                    <artifactId>aspectj-maven-plugin</artifactId>
-                    <version>${version.aspectj-maven-plugin}</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-source-plugin</artifactId>
-                    <version>${version.maven-source-plugin}</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>${version.maven-javadoc-plugin}</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.sonatype.plugins</groupId>
-                    <artifactId>nexus-staging-maven-plugin</artifactId>
-                    <version>${version.nexus-staging-maven-plugin}</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-gpg-plugin</artifactId>
-                    <version>${version.maven-gpg-plugin}</version>
-                </plugin>
-            </plugins>
-        </pluginManagement>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -284,7 +243,6 @@
                     <plugin>
                         <groupId>com.nickwongdev</groupId>
                         <artifactId>aspectj-maven-plugin</artifactId>
-                        <version>${version.aspectj-maven-plugin}</version>
                         <configuration>
                             <verbose>true</verbose>
                             <privateScope>true</privateScope>
