@@ -48,7 +48,7 @@ public aspect NoticeIndexViewsAJ {
             :@JsonView(FosViews.Summary.class);
 
     declare @field: List<NoticeHitType>
-            NoticeSearchResponse.NoticeList.hitOfNoticeIndex
+            NoticeSearchResponse.NoticeList.hitOfNoticeIndices
             :@JsonView(FosViews.Summary.class);
 
     declare @field: float
@@ -97,11 +97,11 @@ public aspect NoticeIndexViewsAJ {
 
     public boolean NoticeIndex.alreadyLoaded = false;
 
-    public boolean NoticeIndex .getAlreadyLoaded() {
+    public boolean NoticeIndex.getAlreadyLoaded() {
         return this.alreadyLoaded;
     }
 
-    public NoticeIndex NoticeIndex .setAlreadyLoaded(boolean loaded) {
+    public NoticeIndex NoticeIndex.setAlreadyLoaded(boolean loaded) {
         this.alreadyLoaded = loaded;
         return this;
     }
