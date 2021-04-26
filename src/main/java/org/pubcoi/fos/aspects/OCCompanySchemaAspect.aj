@@ -28,9 +28,9 @@ import org.springframework.data.mongodb.core.mapping.MongoId;
 @Configuration
 public aspect OCCompanySchemaAspect {
 
-    declare @type: com.opencorporates.schemas.OCCompanySchema :@Document(collection = "oc_companies");
+    declare @type: OCCompanySchema :@Document(collection = "oc_companies");
 
-    public String com.opencorporates.schemas.OCCompanySchema.id;
+    public String OCCompanySchema .id;
 
     public String OCCompanySchema .getId() {
         return this.id;

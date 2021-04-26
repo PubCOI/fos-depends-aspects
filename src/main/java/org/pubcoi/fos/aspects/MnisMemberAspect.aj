@@ -28,13 +28,13 @@ import javax.xml.bind.annotation.XmlTransient;
 @Configuration
 public aspect MnisMemberAspect {
 
-    declare @type: org.pubcoi.cdm.mnis.MnisMemberType :@Document(collection = "mnis_members");
+    declare @type: MnisMemberType :@Document(collection = "mnis_members");
 
-    declare @field: Integer org.pubcoi.cdm.mnis.MnisMemberType.memberId :@Id;
+    declare @field: Integer MnisMemberType.memberId :@Id;
 
-    declare @field: String org.pubcoi.cdm.mnis.MnisMemberType.pwId :@XmlTransient;
+    declare @field: String MnisMemberType.pwId :@XmlTransient;
 
-    public String org.pubcoi.cdm.mnis.MnisMemberType.pwId;
+    public String MnisMemberType.pwId;
 
     public String MnisMemberType .getPwId() {
         return this.pwId;

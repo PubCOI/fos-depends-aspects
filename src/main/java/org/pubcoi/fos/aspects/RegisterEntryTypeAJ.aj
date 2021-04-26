@@ -28,11 +28,11 @@ import javax.xml.bind.annotation.XmlTransient;
 @Configuration
 public aspect RegisterEntryTypeAJ {
 
-    declare @type: org.pubcoi.cdm.pw.RegisterRecordType :@Document(collection = "pw_parent_records");
+    declare @type: RegisterRecordType :@Document(collection = "pw_parent_records");
 
-    declare @field: String org.pubcoi.cdm.pw.RegisterRecordType.id :@Id;
+    declare @field: String RegisterRecordType.id :@Id;
 
-    declare @field: String org.pubcoi.cdm.pw.RegisterRecordType.id :@XmlTransient;
+    declare @field: String RegisterRecordType.id :@XmlTransient;
 
     public String RegisterRecordType.id;
 
