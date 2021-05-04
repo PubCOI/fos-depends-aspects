@@ -28,7 +28,7 @@
     </parent>
 
     <artifactId>fos-depends-aspects</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3-SNAPSHOT</version>
 
     <name>fos-depends-aspects</name>
     <url>https://github.com/PubCOI/fos-depends-aspects</url>
@@ -38,7 +38,7 @@
         <connection>scm:git:git@github.com:PubCOI/fos-depends-aspects.git</connection>
         <developerConnection>scm:git:git@github.com:PubCOI/fos-depends-aspects.git</developerConnection>
         <url>https://github.com/PubCOI/fos-depends-aspects</url>
-      <tag>fos-depends-aspects-1.0.2</tag>
+      <tag>HEAD</tag>
   </scm>
 
     <licenses>
