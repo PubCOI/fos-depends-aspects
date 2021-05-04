@@ -25,7 +25,7 @@
     <parent>
         <groupId>org.pubcoi.fos</groupId>
         <artifactId>parent</artifactId>
-        <version>1.0.2-SNAPSHOT</version>
+        <version>1.0.2</version>
     </parent>
 
     <artifactId>fos-depends-aspects</artifactId>
@@ -67,10 +67,10 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <!-- project deps -->
-        <version.pubcoi-schemas.hmgcf>1.0.1-SNAPSHOT</version.pubcoi-schemas.hmgcf>
+        <version.pubcoi-schemas.hmgcf>1.0.1</version.pubcoi-schemas.hmgcf>
         <version.pubcoi-schemas.openc>1.0.0</version.pubcoi-schemas.openc>
-        <version.pubcoi-schemas.mnis>1.0.0-SNAPSHOT</version.pubcoi-schemas.mnis>
-        <version.pubcoi-schemas.parlparse>1.0.0-SNAPSHOT</version.pubcoi-schemas.parlparse>
+        <version.pubcoi-schemas.mnis>1.0.0</version.pubcoi-schemas.mnis>
+        <version.pubcoi-schemas.parlparse>1.0.0</version.pubcoi-schemas.parlparse>
 
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -202,7 +202,7 @@
                             <rules>
                                 <banDuplicatePomDependencyVersions/>
                                 <dependencyConvergence/>
-<!--                                <requireReleaseDeps/>-->
+                                <requireReleaseDeps/>
                                 <requireMavenVersion>
                                     <version>[3.5,)</version>
                                 </requireMavenVersion>
