@@ -18,7 +18,8 @@
   ~ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
   -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
@@ -38,8 +39,8 @@
         <connection>scm:git:git@github.com:PubCOI/fos-depends-aspects.git</connection>
         <developerConnection>scm:git:git@github.com:PubCOI/fos-depends-aspects.git</developerConnection>
         <url>https://github.com/PubCOI/fos-depends-aspects</url>
-      <tag>HEAD</tag>
-  </scm>
+        <tag>HEAD</tag>
+    </scm>
 
     <licenses>
         <license>
@@ -66,7 +67,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <!-- project deps -->
-        <version.pubcoi-schemas.hmgcf>1.0.1</version.pubcoi-schemas.hmgcf>
+        <version.pubcoi-schemas.hmgcf>1.0.2</version.pubcoi-schemas.hmgcf>
         <version.pubcoi-schemas.openc>1.0.0</version.pubcoi-schemas.openc>
         <version.pubcoi-schemas.mnis>1.0.0</version.pubcoi-schemas.mnis>
         <version.pubcoi-schemas.parlparse>1.0.0</version.pubcoi-schemas.parlparse>
@@ -199,9 +200,9 @@
                         </goals>
                         <configuration>
                             <rules>
-                                <banDuplicatePomDependencyVersions />
-                                <dependencyConvergence />
-                                <requireReleaseDeps />
+                                <banDuplicatePomDependencyVersions/>
+                                <dependencyConvergence/>
+<!--                                <requireReleaseDeps/>-->
                                 <requireMavenVersion>
                                     <version>[3.5,)</version>
                                 </requireMavenVersion>
